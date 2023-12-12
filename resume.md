@@ -1,11 +1,14 @@
 ---
 layout: page
 title: Resume
-permalink: /resume/
+permalink: /resume
 ---
 
 [**Resume PDF**](/assets/resume.pdf)
 
+## **ELI SACHS**
+
+## **Backend Developer**
 
 ### **PROFILE**
 - Former educator turned developer with love of languages and problem solving
@@ -83,3 +86,5 @@ Certificate in Backend Software Engineering
 
 #### **Eckerd College** (St. Petersburg, FL)
 Environmental Studies / Psychology
+
+[**Resume PDF**](/assets/resume.pdf)

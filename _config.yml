@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: EAS Consulting LLC
+title: EAS Consulting
 author: Eli Sachs
 email: easachs13@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
@@ -28,8 +28,6 @@ url: "https://easachs.github.io"
 
 github_username:  easachs
 linkedin_username: easachs
-
-google_analytics: G-RS80H21YWV
 
 # Build settings
 theme: minima
