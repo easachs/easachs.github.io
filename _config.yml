@@ -38,8 +38,8 @@ plugins:
 
 header_pages:
 - about.md
-- portfolio.md
 - resume.md
+- portfolio.md
 - contact.html
 
 # Exclude from processing.
