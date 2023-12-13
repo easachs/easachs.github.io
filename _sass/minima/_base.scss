@@ -8,8 +8,6 @@ dl, dd, ol, ul, figure {
   padding: 0;
 }
 
-
-
 /**
  * Basic styling
  */
@@ -28,8 +26,6 @@ body {
   flex-direction: column;
 }
 
-
-
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
@@ -37,10 +33,9 @@ h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure,
 %vertical-rhythm {
-  margin-bottom: $spacing-unit / 2;
+  margin-bottom: $spacing-unit / 3;
+  padding-top: $spacing-unit / 3;
 }
-
-
 
 /**
  * `main` element
@@ -49,8 +44,6 @@ main {
   display: block; /* Default value of `display` of `main` element is 'inline' in IE 11. */
 }
 
-
-
 /**
  * Images
  */
@@ -58,8 +51,6 @@ img {
   max-width: 100%;
   vertical-align: middle;
 }
-
-
 
 /**
  * Figures
@@ -71,8 +62,6 @@ figure > img {
 figcaption {
   font-size: $small-font-size;
 }
-
-
 
 /**
  * Lists
@@ -88,16 +77,12 @@ li {
   }
 }
 
-
-
 /**
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
   font-weight: $base-font-weight;
 }
-
-
 
 /**
  * Links
@@ -123,7 +108,6 @@ a {
   }
 }
 
-
 /**
  * Blockquotes
  */
@@ -139,8 +123,6 @@ blockquote {
     margin-bottom: 0;
   }
 }
-
-
 
 /**
  * Code formatting
@@ -168,8 +150,6 @@ pre {
   }
 }
 
-
-
 /**
  * Wrapper
  */
@@ -180,6 +160,7 @@ pre {
   margin-left: auto;
   padding-right: $spacing-unit;
   padding-left: $spacing-unit;
+  border-radius: 25px;
   @extend %clearfix;
   background-color: rgba(255, 255, 255, 0.8);
 
@@ -200,8 +181,6 @@ pre {
   clear: both;
 }
 
-
-
 /**
  * Icons
  */
@@ -220,8 +199,6 @@ pre {
     padding-top: 5px;
   }
 }
-
-
 
 /**
  * Tables
