@@ -33,7 +33,7 @@ h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure,
 %vertical-rhythm {
-  margin-bottom: $spacing-unit / 3;
+  padding-bottom: $spacing-unit / 3;
   padding-top: $spacing-unit / 3;
 }
 
@@ -160,7 +160,7 @@ pre {
   margin-left: auto;
   padding-right: $spacing-unit;
   padding-left: $spacing-unit;
-  border-radius: 25px;
+  border-radius: 10px;
   @extend %clearfix;
   background-color: rgba(255, 255, 255, 0.8);
 
