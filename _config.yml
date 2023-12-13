@@ -24,7 +24,7 @@ email: easachs13@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   "You miss 100% of the shots you don't take." - Wayne Gretzky
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://easachs.github.io"
+url: "https://www.easachs.com"
 
 github_username:  easachs
 linkedin_username: easachs
