@@ -4,7 +4,7 @@
 <head>
   <style>
     body {
-      background-image: url('{{ site.baseurl }}/assets/rainforest.jpg');
+      background-image: url('{{ site.baseurl }}/assets/north.jpg');
       background-repeat: no-repeat;
       background-attachment: fixed;
       background-size: cover;
@@ -14,6 +14,7 @@
       z-index: -1;
     }
   </style>
+  {% seo %}
 </head>
 
 {%- include head.html -%}
@@ -24,7 +25,7 @@
 
   <main class="page-content" aria-label="Content">
     <div class="wrapper">
-      </br>
+      <br>
       {{ content }}
     </div>
   </main>
