@@ -1,38 +1,18 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: " en" }}">
 
-<head>
-  <style>
-    body {
-      background-image: url('{{ site.baseurl }}/assets/north.jpg');
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      background-size: cover;
-      background-position: center center;
-      height: 100%;
-      width: 100%;
-      z-index: -1;
-    }
-  </style>
-  {% seo %}
-  {% include google-analytics.html %}
-</head>
-
-{%- include head.html -%}
+{% include head.html %}
 
 <body>
-
-  {%- include header.html -%}
+  {% include header.html %}
 
   <main class="page-content" aria-label="Content">
-    <div class="wrapper">
-      <br>
+    <div class="wrapper" style="padding-top: 15px;">
       {{ content }}
     </div>
   </main>
 
-  {%- include footer.html -%}
-
+  {% include footer.html %}
 </body>
 
 </html>

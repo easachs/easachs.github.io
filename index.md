@@ -21,7 +21,7 @@ Fullstack and backend software design specializing in Ruby on Rails. With a focu
 
 ### Testimonials
 
-> "Working with Eli has been a game-changer for our business. The attention to detail and the quality of work is outstanding." - *Client Name*
+> "Working with Eli has been a game-changer for our business. The attention to detail and the quality of work is outstanding." - Pierre Morrel, Morrel & Son
 
 ### Ready to Start Your Project?
 

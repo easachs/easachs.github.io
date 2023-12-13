@@ -29,6 +29,8 @@ url: "https://www.easachs.com"
 github_username:  easachs
 linkedin_username: easachs
 
+google_analytics: "G-RS80H21YWV"
+
 # Build settings
 theme: minima
 plugins:
@@ -36,11 +38,16 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
 
+collections:
+  pages:
+    output: true
+    permalink: /:title
+
 header_pages:
-- about.md
-- resume.md
-- portfolio.md
-- contact.html
+- _pages/about.md
+- _pages/resume.md
+- _pages/portfolio.md
+- _pages/contact.html
 
 # Exclude from processing.
 # The following items will not be processed, by default.
