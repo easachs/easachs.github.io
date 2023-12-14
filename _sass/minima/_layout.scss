@@ -130,20 +130,18 @@
   font-weight: bold;
 }
 
-.footer-col-1 {
-  width: -webkit-calc(33% - (#{$spacing-unit} / 2));
-  width: calc(33% - (#{$spacing-unit} / 2));
+.footer-col-1,
+.footer-col-2,
+.footer-col-3 {
+  width: -webkit-calc(33.33% - (#{$spacing-unit} / 2));
+  width: calc(33.33% - (#{$spacing-unit} / 2));
 }
 
 .footer-col-2 {
-  width: -webkit-calc(33% - (#{$spacing-unit} / 2));
-  width: calc(33% - (#{$spacing-unit} / 2));
   text-align: center;
 }
 
 .footer-col-3 {
-  width: -webkit-calc(34% - (#{$spacing-unit} / 2));
-  width: calc(34% - (#{$spacing-unit} / 2));
   text-align: right;
 }
 

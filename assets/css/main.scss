@@ -1,0 +1,50 @@
+---
+---
+
+@import "minima";
+
+body {
+  background-image: url('{{ site.baseurl }}/assets/images/habitat.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+.navbar {
+  --bs-navbar-padding-y: 0;
+  --bs-navbar-brand-padding-y: 0;
+}
+
+.resume {
+  padding: 10px;
+}
+
+.resume-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include media-query($on-palm) {
+    display: block;
+  }
+}
+
+.resume-columns ul {
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+  list-style-type: disc;
+  padding-left: 20px;
+
+  @include media-query($on-palm) {
+    columns: 1;
+    -webkit-columns: 1;
+    -moz-columns: 1;
+  }
+}
+
+.navbar-collapse {
+  flex-grow: 0;
+}
