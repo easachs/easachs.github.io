@@ -3,7 +3,27 @@ layout: page
 title: Projects
 ---
 
-<img src="/assets/images/projects/fmf.jpg" class="d-block w-100" alt="FoundMyFitness">
+<div id="carouselExampleAutoplaying" class="carousel slide carousel-fade">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="/assets/images/projects/fmf.jpg" class="d-block w-100" alt="FoundMyFitness">
+    </div>
+    <div class="carousel-item">
+      <img src="/assets/images/projects/episodes.jpg" class="d-block w-100" alt="Episodes">
+    </div>
+    <div class="carousel-item">
+      <img src="/assets/images/projects/topics.jpg" class="d-block w-100" alt="Topics">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
 
 **[FoundMyFitness](https://www.foundmyfitness.com/)** is a website and community focused on the science of nutrition, aging, fitness, and cognitive and physical wellbeing. Along with podcasts / videos and detailed write-ups on health topics, FoundMyFitness can use info from services like 23andMe or Ancestry.com to generate a personalized report of nutritional and lifestyle insights, specific to your genotype.
 
