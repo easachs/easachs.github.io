@@ -90,6 +90,7 @@ h1, h2, h3, h4, h5, h6 {
 a {
   color: $brand-color;
   text-decoration: none;
+  cursor: pointer;
 
   &:visited {
     color: darken($brand-color, 15%);
@@ -97,14 +98,6 @@ a {
 
   &:hover {
     color: $text-color;
-  }
-
-  .social-media-list &:hover {
-    text-decoration: none;
-
-    .username {
-      text-decoration: underline;
-    }
   }
 }
 
@@ -196,12 +189,6 @@ pre {
     fill: #{$grey-color};
     padding-right: 5px;
     vertical-align: text-top;
-}
-
-.social-media-list {
-  li + li {
-    padding-top: 5px;
-  }
 }
 
 /**

@@ -110,17 +110,11 @@
   }
 }
 
-.contact-list,
-.social-media-list {
-  list-style: none;
-  margin-left: 0;
-}
-
 .footer-col {
   margin-right: auto;
   margin-left: auto;
   float: left;
-  margin-bottom: $spacing-unit / 2;
+  margin: $spacing-unit / 2;
   font-weight: bold;
 }
 

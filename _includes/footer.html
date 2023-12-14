@@ -3,16 +3,9 @@
   
   <div class="flex-header">
     <div class="footer-col footer-col-1">
-      <ul class="contact-list">
-        <li class="p-name">
-          {%- if site.author -%}
-          {{ site.author | escape }}
-          {%- endif -%}
-        </li>
-        {%- if site.email -%}
-        <li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-        {%- endif -%}
-      </ul>
+      {%- if site.email -%}
+        <a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a>
+      {%- endif -%}
     </div>
 
     <div class="footer-col footer-col-2">
@@ -20,7 +13,7 @@
     </div>
 
     <div class="footer-col footer-col-3">
-      <p>{{- site.description | escape -}}</p>
+      {{- site.description | escape -}}
     </div>
   </div>
 </footer>

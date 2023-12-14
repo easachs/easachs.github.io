@@ -1,5 +1,4 @@
-title: easachs
-author: Eli Sachs
+title: Eli Sachs
 email: easachs13@gmail.com
 description: >-
   Sophistication through Simplicity
@@ -25,5 +24,5 @@ collections:
 header_pages:
 - _pages/about.md
 - _pages/resume.html
-- _pages/portfolio.md
+- _pages/projects.md
 - _pages/contact.html
