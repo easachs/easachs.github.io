@@ -3,7 +3,7 @@ layout: page
 title: Projects
 ---
 
-<div id="carouselExampleAutoplaying" class="carousel slide carousel-fade">
+<div id="carouselFMF" class="carousel slide carousel-fade">
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img src="/assets/images/projects/fmf.jpg" class="d-block w-100" alt="FoundMyFitness">
@@ -15,11 +15,11 @@ title: Projects
       <img src="/assets/images/projects/topics.jpg" class="d-block w-100" alt="Topics">
     </div>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselFMF" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
   </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselFMF" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
@@ -27,7 +27,7 @@ title: Projects
 
 **[FoundMyFitness](https://www.foundmyfitness.com/)** is a website and community focused on the science of nutrition, aging, fitness, and cognitive and physical wellbeing. Along with podcasts / videos and detailed write-ups on health topics, FoundMyFitness can use info from services like 23andMe or Ancestry.com to generate a personalized report of nutritional and lifestyle insights, specific to your genotype.
 
-<div id="carouselExampleAutoplaying" class="carousel slide carousel-fade">
+<div id="carouselSkedaddle" class="carousel slide carousel-fade">
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img src="/assets/images/projects/sked.jpg" class="d-block w-100" alt="Skedaddle">
@@ -39,11 +39,11 @@ title: Projects
       <img src="/assets/images/projects/barna.jpg" class="d-block w-100" alt="Itinerary">
     </div>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselSkedaddle" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
   </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselSkedaddle" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>

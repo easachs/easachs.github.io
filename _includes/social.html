@@ -1,9 +1,11 @@
 {%- if site.github_username -%}
-  <a href="https://github.com/{{ site.github_username| cgi_escape | escape }}"><svg class="svg-icon">
+  <a href="https://github.com/{{ site.github_username| cgi_escape | escape }}" aria-label="GitHub">
+  <svg class="svg-icon" role="img" aria-hidden="true" focusable="false">
   <use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"></use></svg></a>
 {%- endif -%}
-<span> </span>
+<span role="presentation"> </span>
 {%- if site.linkedin_username -%}
-  <a href="https://www.linkedin.com/in/{{ site.linkedin_username| cgi_escape | escape }}"><svg class="svg-icon">
+  <a href="https://www.linkedin.com/in/{{ site.linkedin_username| cgi_escape | escape }}" aria-label="LinkedIn">
+  <svg class="svg-icon" role="img" aria-hidden="true" focusable="false">
   <use xlink:href="{{ '/assets/minima-social-icons.svg#linkedin' | relative_url }}"></use></svg></a>
 {%- endif -%}

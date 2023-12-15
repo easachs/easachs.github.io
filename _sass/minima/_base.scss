@@ -13,7 +13,7 @@ dl, dd, ol, ul, figure {
  */
 body {
   font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
-  color: $text-color;
+  color: $grey-color;
   background-color: $background-color;
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
@@ -97,7 +97,7 @@ a {
   }
 
   &:hover {
-    color: $text-color;
+    color: $grey-color;
   }
 }
 
@@ -198,7 +198,7 @@ table {
   margin-bottom: $spacing-unit;
   width: 100%;
   text-align: $table-text-align;
-  color: lighten($text-color, 18%);
+  color: lighten($grey-color, 18%);
   border-collapse: collapse;
   border: 1px solid $grey-color-light;
   tr {

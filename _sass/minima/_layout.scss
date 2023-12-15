@@ -3,7 +3,6 @@
  */
 .site-header {
   min-height: $spacing-unit * 1.865;
-  background-color: rgba(255, 255, 255, 0.7);
 
   // Positioning context for the mobile navigation icon
   position: relative;
@@ -34,7 +33,7 @@
   }
 
   .page-link {
-    color: $text-color;
+    color: $grey-color;
     line-height: $base-line-height;
     font-weight: bold;
 
@@ -99,7 +98,6 @@
  * Site footer
  */
 .site-footer {
-  background-color: rgba(255, 255, 255, 0.7);
   padding-right: $spacing-unit;
   padding-left: $spacing-unit;
   @extend %clearfix;
@@ -164,7 +162,6 @@
   padding: $spacing-unit 0;
   padding-top: $spacing-unit * 3;
   flex: 1;
-  background-color: rgba(255, 255, 255, 0.7);
 }
 
 .page-heading {

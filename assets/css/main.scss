@@ -25,6 +25,10 @@ body {
   padding: 10px;
 }
 
+.opaque {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
 .flex-header {
   display: flex;
   justify-content: space-between;
@@ -55,4 +59,15 @@ body {
 
 .navbar-collapse {
   flex-grow: 0;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  padding: 8px;
+}
+
+.skip-link:focus {
+  top: 0;
 }
