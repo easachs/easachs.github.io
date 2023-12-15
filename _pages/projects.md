@@ -1,6 +1,5 @@
 ---
 layout: page
-title: Projects
 ---
 
 <div id="carouselFMF" class="carousel slide carousel-fade">
@@ -9,7 +8,7 @@ title: Projects
       <img src="/assets/images/projects/fmf.jpg" class="d-block w-100" alt="FoundMyFitness">
     </div>
     <div class="carousel-item">
-      <img src="/assets/images/projects/episodes.jpg" class="d-block w-100" alt="Episodes">
+      <img src="/assets/images/projects/podcasts.jpg" class="d-block w-100" alt="Episodes">
     </div>
     <div class="carousel-item">
       <img src="/assets/images/projects/topics.jpg" class="d-block w-100" alt="Topics">

@@ -23,6 +23,11 @@ body {
 
 .resume {
   padding: 10px;
+  
+  @include media-query($on-palm) {
+    padding: 5px;
+    font-size: $small-font-size;
+  }
 }
 
 .opaque {

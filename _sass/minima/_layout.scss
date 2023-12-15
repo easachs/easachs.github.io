@@ -164,22 +164,12 @@
   flex: 1;
 }
 
-.page-heading {
-  @include relative-font-size(2);
-  text-align: center;
-  font-weight: bold;
-}
-
-.post-list-heading {
-  @include relative-font-size(1.75);
-}
-
 .post-list {
   margin-left: 0;
   list-style: none;
 
   >li {
-    margin-bottom: $spacing-unit;
+    margin-bottom: $spacing-unit / 2;
   }
 }
 

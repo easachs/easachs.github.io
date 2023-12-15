@@ -1,9 +1,8 @@
 ---
 layout: page
-title: Web Development Services
+title: Reliable and Scalable Software Solutions
 ---
 
-<h2 class="post-header">Reliable and Scalable Backend Solutions</h2>
 Fullstack software design specializing in Ruby on Rails. With a focus on building robust, scalable, and maintainable web applications, EAS helps businesses and individuals turn their ideas into reality.
 
 ### Why EAS?

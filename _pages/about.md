@@ -1,6 +1,5 @@
 ---
 layout: page
-title: About
 ---
 
 Environmentalist, educator, 6th grade spelling bee champion, traveler, music lover, collaborator, language learner, running/hiking/climbing enthusiast, aspiring paella chef, gardener and former Peace Corps Togo volunteer.
