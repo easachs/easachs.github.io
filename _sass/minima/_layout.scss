@@ -9,15 +9,11 @@
 }
 
 .site-title {
+  font-family: Georgia, $base-font-family;
   @include relative-font-size(1.625);
   font-weight: bold;
   line-height: $base-line-height * $base-font-size * 2.5;
   margin-bottom: 0;
-
-  &,
-  &:visited {
-    color: $grey-color-dark;
-  }
 }
 
 .site-nav {
@@ -32,8 +28,7 @@
     display: none;
   }
 
-  .page-link {
-    color: $grey-color;
+  .dash-link {
     line-height: $base-line-height;
     font-weight: bold;
 
@@ -67,7 +62,7 @@
       text-align: center;
 
       >svg {
-        fill: $grey-color-dark;
+        fill: $brand-color-dark;
       }
     }
 
@@ -81,7 +76,7 @@
       padding-bottom: 5px;
     }
 
-    .page-link {
+    .dash-link {
       display: block;
       padding: 5px 10px;
 
@@ -98,8 +93,10 @@
  * Site footer
  */
 .site-footer {
+  color: $brand-color;
   padding-right: $spacing-unit;
   padding-left: $spacing-unit;
+  background-color: rgba(248, 249, 250, 0.7);
   @extend %clearfix;
   
   @include media-query($on-laptop) {
@@ -114,6 +111,11 @@
   float: left;
   margin: $spacing-unit / 2;
   font-weight: bold;
+
+  @include media-query($on-laptop) {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 .footer-col-1,
@@ -162,6 +164,11 @@
   padding: $spacing-unit 0;
   padding-top: $spacing-unit * 3;
   flex: 1;
+  background-color: rgba(248, 249, 250, 0.7);
+
+  @include media-query($on-palm) {
+    padding-bottom: 0;
+  }
 }
 
 .post-list {
@@ -175,12 +182,7 @@
 
 .post-meta {
   font-size: $small-font-size;
-  color: $grey-color;
-}
-
-.post-link {
-  display: block;
-  @include relative-font-size(1.5);
+  color: $brand-color;
 }
 
 /**
@@ -192,14 +194,10 @@
 }
 
 .post-title {
-  @include relative-font-size(2.625);
+  @include relative-font-size(2);
   letter-spacing: -1px;
   line-height: 1;
   font-weight: bold;
-
-  @include media-query($on-laptop) {
-    @include relative-font-size(2.25);
-  }
 }
 
 .post-content {

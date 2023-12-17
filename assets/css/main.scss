@@ -11,27 +11,37 @@ body {
   background-image: url('{{ site.baseurl }}/assets/images/core/habitat.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: cover;
   background-position: center;
-  z-index: -1;
+  background-size: cover;
+
+  @include media-query($on-palm) {
+    background-image: linear-gradient(to right, #0D1B2A, #778DA9);
+  }
 }
 
 .navbar {
   --bs-navbar-padding-y: 0;
   --bs-navbar-brand-padding-y: 0;
-}
+  background-color: $background-color;
 
-.resume {
-  padding: 10px;
-  
-  @include media-query($on-palm) {
-    padding: 5px;
-    font-size: $small-font-size;
+  .gold {
+    color: #fca311;
   }
 }
 
-.opaque {
-  background-color: rgba(255, 255, 255, 0.7);
+.navbar-collapse {
+  flex-grow: 0;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  padding: 8px;
+
+  &:focus {
+    top: 0;
+  }
 }
 
 .flex-header {
@@ -44,8 +54,12 @@ body {
   }
 }
 
-.txt-center {
-  text-align: center;
+.resume {
+  padding: 10px;
+  
+  @include media-query($on-palm) {
+    padding: 5px;
+  }
 }
 
 .resume-columns ul {
@@ -62,17 +76,6 @@ body {
   }
 }
 
-.navbar-collapse {
-  flex-grow: 0;
-}
-
-.skip-link {
-  position: absolute;
-  top: -40px;
-  left: 0;
-  padding: 8px;
-}
-
-.skip-link:focus {
-  top: 0;
+.highlight {
+  background: 0;
 }

@@ -92,12 +92,8 @@ a {
   text-decoration: none;
   cursor: pointer;
 
-  &:visited {
-    color: darken($brand-color, 15%);
-  }
-
   &:hover {
-    color: $grey-color;
+    color: $brand-color-dark;
   }
 }
 
@@ -155,17 +151,19 @@ pre {
   padding-left: $spacing-unit;
   border-radius: 10px;
   @extend %clearfix;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(248, 249, 250, 0.8);
 
   @include media-query($on-laptop) {
     max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
     max-width:         calc(#{$content-width} - (#{$spacing-unit}));
-    padding-right: $spacing-unit / 2;
-    padding-left: $spacing-unit / 2;
   }
 
   @include media-query($on-palm) {
     border-radius: 0;
+
+    ul {
+        margin-left: $spacing-unit / 2;
+      }
   }
 }
 
@@ -186,9 +184,13 @@ pre {
     width: 16px;
     height: 16px;
     display: inline-block;
-    fill: #{$grey-color};
+    fill: #{$brand-color};
     padding-right: 5px;
     vertical-align: text-top;
+
+    &:hover {
+      fill: $brand-color-dark;
+    }
 }
 
 /**
