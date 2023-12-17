@@ -76,6 +76,15 @@ body {
   }
 }
 
+.post-pic {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  margin-bottom: $spacing-unit / 2;
+  border: 1px solid $grey-color-light;
+}
+
 .highlight {
   background: 0;
 }

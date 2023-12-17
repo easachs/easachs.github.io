@@ -5,6 +5,8 @@ date:   2023-12-15 12:00:00
 tags: rails gems tutorial
 ---
 
+<img class="post-pic" src="/assets/images/posts/field-test.jpg" alt="Split Testing">
+
 Split testing, also known as A/B testing, is a practice used in web development to improve user experience and increase a site's effectiveness by comparing metrics for different versions of a given feature. In other words, which option performs better? This can be measured by user engagement, such as time spent on a page, or conversion rates - counting relative clicks, form submissions, purchases, or any other performance indicator.
 
 Split testing is an excellent research tool because it puts the user experience at the forefront, focusing on what actual users prefer and how they behave. Will a page's new layout or theme impact the way your audience interacts with the site? Even changing the color of a button could result in users clicking it more or less often. With an effective split testing framework, businesses can better understand the impact of any changes they make.
