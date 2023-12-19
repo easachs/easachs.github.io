@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Custom Google Analytics with Rails
+title:  Server-Side Google Analytics
 date:   2023-12-20 12:00:00
 tags: rails tutorial
 ---
@@ -19,7 +19,7 @@ A new iteration, Google Analytics 4 (GA4), came out earlier this year, replacing
 **Client-side** analytics are tracked from a user's browser via JavaScript. Setting up client-side GA4 is fairly simple - after setting up an account and your property with a data stream, just add the following to the **head** of your application (replacing the ID with your own measurement ID):
 
 {% highlight html %}
-#=> app/views/_analytics.html.erb
+<!-- app/views/_analytics.html.erb -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-1234567890"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -32,8 +32,8 @@ A new iteration, Google Analytics 4 (GA4), came out earlier this year, replacing
 
 Abstract it out into its own partial:
 
-{% highlight ruby %}
-#=> app/views/layouts/application.html.erb
+{% highlight erb %}
+<!-- app/views/layouts/application.html.erb -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -56,8 +56,8 @@ Our first step will be to create an API service that will handle posting custom 
 
 Here's an example of how you could set up this service using the **Faraday** gem:
 
-{% highlight ruby %}
-#=> app/services/analytics_api.rb
+{% highlight rb %}
+# app/services/analytics_api.rb
 class AnalyticsApi
   class << self
     def track(conversion)
@@ -76,8 +76,8 @@ end
 ### Event factory
 Once you've got your API service set up, you can customize which conversions you would like to send to Analytics. First and foremost, it is important to understand what type of payload Google Analytics is expecting. Next, you should determine what data the client would like to track. For our project, since we ended up sending most of our events from controllers, we were able to pass along information that had already been captured as **params**. Your factory to build an analytics payload might look something like this:
 
-{% highlight ruby %}
-#=> app/services/analytics_factory.rb
+{% highlight rb %}
+# app/services/analytics_factory.rb
 class AnalyticsFactory
   class << self
     def monthly_membership
@@ -130,8 +130,8 @@ Which parameters you choose to track is entirely up to you, but here are some po
 ### Background worker
 Now that we have a factory to create our payload and an API to post it with, we can perform a job through background processors like ActiveJob or Sidekiq to send the event asynchronously. For example:
 
-{% highlight ruby %}
-#=> app/workers/analytics_worker.rb
+{% highlight rb %}
+# app/workers/analytics_worker.rb
 class AnalyticsWorker < ActiveJob::Base
   def perform(conversion)
     AnalyticsApi.track(conversion)
@@ -142,8 +142,8 @@ end
 ### Posting to Analytics
 Finally, it's time to post our event - let's tie it all together. Here is how it might look to pass along params from within a controller:
 
-{% highlight ruby %}
-#=> app/controllers/your_controller.rb
+{% highlight rb %}
+# app/controllers/your_controller.rb
 def create
   conversion = AnalyticsFactory.your_event(your_params)
   AnalyticsWorker.perform_later(conversion)
@@ -160,7 +160,8 @@ This sequence can also be called from within another service pipeline or backgro
 ### Testing
 You may want to set up a property just for testing and development, with its own measurement ID/secret key. This can be done by storing your development configuration in your `application.yml`/`.env`/credentials, while configuring production with your main ID and secret. First, ensure your local setup correctly sends events to Google Analytics with the appropriate data. Then, you can build out tests for your factory events and API calls to ensure thorough coverage and proper payloads:
 
-{% highlight ruby %}
+{% highlight rb %}
+# spec/services/analytics_factory_spec.rb
 RSpec.describe AnalyticsFactory do
   it 'structures purchase event' do
     event = AnalyticsFactory.purchase('painting', 250.0)

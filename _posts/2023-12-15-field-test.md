@@ -18,14 +18,14 @@ For our test we wanted half of new users to receive one variant of a popup, and 
 ### Installation
 Add `gem 'field_test'` to your Gemfile, then install it:
 
-{% highlight ruby %}
+{% highlight sh %}
 bundle install
 {% endhighlight %}
 
 ### Migration
 Create and apply the migration **CreateFieldTestMemberships**, which adds a table for participants with columns like **participant_id**, **experiment**, **variant**, and **converted** (boolean):
 
-{% highlight ruby %}
+{% highlight sh %}
 rails generate field_test:install
 rails db:migrate
 {% endhighlight %}
@@ -33,13 +33,13 @@ rails db:migrate
 ### Mounting
 Add the following to `config/routes.rb` to create a route for the dashboard:
 
-{% highlight ruby %}
+{% highlight rb %}
 mount FieldTest::Engine, at: 'field_test'
 {% endhighlight %}
 
 In production, remember to secure your dashboard by mounting the engine inside of your admin block, so it won't be accessible to non-admin users. Something like this:
 
-{% highlight ruby %}
+{% highlight rb %}
 authenticate :user, ->(user) { user.admin? } do
   mount FieldTest::Engine, at: 'field_test'
 end
@@ -48,7 +48,7 @@ end
 ### Configuration
 Create a file `config/field_test.yml`. Here is the format to set up your first experiment:
 
-{% highlight ruby %}
+{% highlight yml %}
 experiments:
   my_experiment: # the name of the experiment
     description: # optional
@@ -61,16 +61,23 @@ experiments:
 {% endhighlight %}
 
 ### Variants
-To implement your first test, you will need to initiate it somewhere, and then track when a conversion occurs at a later point. To do this, you will use the built-in methods `field_test(:my_experiment)` and `field_test_converted(:my_experiment)`. Since `field_test(:my_experiment)` creates a new record *and* returns which variant is being used, you could do any of the following:
+To implement your first test, you will need to initiate it somewhere, and then track when a conversion occurs at a later point. To do this, you will use the built-in methods `field_test(:my_experiment)` and `field_test_converted(:my_experiment)`. Since `field_test(:my_experiment)` creates a new record *and* returns which variant is being used, you could do any of the following.
 
-{% highlight ruby %}
+For a controller:
+{% highlight rb %}
 def index
-  @test_variant = field_test(:my_experiment) # for a controller
+  @test_variant = field_test(:my_experiment)
 end
+{% endhighlight %}
 
-def test_variant = field_test(:my_experiment) # for a helper
+For a helper:
+{% highlight rb %}
+def test_variant = field_test(:my_experiment)
+{% endhighlight %}
 
-<% test_variant = field_test(:my_experiment) %> # for a view
+For a view:
+{% highlight erb %}
+<% test_variant = field_test(:my_experiment) %>
 {% endhighlight %}
 
 This will assign the current user to an experiment and variant, based on cookies (default), IP address, or [**ahoy_id**](https://github.com/ankane/ahoy), depending on configuration (see docs for more details). Going forward, that user will always receive their assigned variant, until the experiment ends or a winner is selected (or if they delete the cookie).
@@ -81,21 +88,22 @@ Then, in the appropriate view:
 <button class=test_variant></button>
 {% endhighlight %}
 
-{% highlight ruby %}
-#=> With view_components .html.erb
+Or with view_components:
+{% highlight erb %}
+<!-- app/components/your_component.html.erb -->
 <%= render YourComponent.new(test_variant) %>
 {% endhighlight %}
 
 Sometimes it may be necessary to access which variant the user is assigned to within a job, model or other context. To do this:
 
-{% highlight ruby %}
+{% highlight rb %}
 experiment = FieldTest::Experiment.find(:my_experiment)
 variant = experiment.variant(user)
 {% endhighlight %}
 
 For our split test, we needed to create two distinct versions of a popup. With [**view_component**](https://viewcomponent.org/) this was fairly straightforward. The modal already existed as a component, so we just had to pass in which variant to use. From there, we could differentiate between them within the component class and accompanying view. This might look like:
 
-{% highlight ruby %}
+{% highlight rb %}
 #=> app/components/your_component.rb
 class YourComponent < ViewComponent::Base
   def initialize(variant)
@@ -114,13 +122,13 @@ The logic could also carry over the the component's `.html.erb` or `content` blo
 
 As mentioned, test participants can be assigned based on cookies, IP addresses, or **ahoy** IDs. To disable cookies for **field_test**, add `cookies: false` to your `field_test.yml` (without indentation). To track tests by user:
 
-{% highlight ruby %}
+{% highlight rb %}
 field_test(:my_experiment, participant: current_user)
 {% endhighlight %}
 
 To use **ahoy** IDs, include the following in your Application Controller:
 
-{% highlight ruby %}
+{% highlight rb %}
 def field_test_participant
   [ahoy.user, ahoy.visitor_token]
 end
@@ -130,7 +138,7 @@ end
 
 To evaluate the success rate for each design, we need to track each time a conversion occurs. This could appear in several places depending on the metric, but quite often will be in a controller action. For example, when a user signs up for a newsletter, we might use a **create** action to create a subscription. This is an ideal location to call `field_test_converted(:my_experiment)`:
 
-{% highlight ruby %}
+{% highlight rb %}
 #=> app/controllers/subscriptions_controller.rb
 def create
   sub = current_user.subscription.create(subscription_params)
@@ -140,7 +148,7 @@ end
 
 You can also track multiple conversions for a particular experiment by adding the following to your `field_test.yml`:
 
-{% highlight ruby %}
+{% highlight yml %}
 experiments:
   my_experiment:
     goals:
@@ -150,7 +158,7 @@ experiments:
 
 Then to track that goal:
 
-{% highlight ruby %}
+{% highlight rb %}
 field_test_converted(:my_experiment, goal: 'first_goal')
 {% endhighlight %}
 
@@ -162,7 +170,7 @@ Additionally, if the outcomes of a conversion differ between variants, you will 
 
 Now that we've implemented split testing, we can monitor the performance of each variant to determine which design resonates best. To view results use the dashboard, which displays how many users have been assigned to each variant, each variant's conversion rate, as well as Bayesian stats of how each option is performing. Clicking into each experiment, you can see the individual records for assignments and conversions. Once your experiment has finished, you can end the test with the following configuration in your `field_test.yml` file:
 
-{% highlight ruby %}
+{% highlight yml %}
 experiments:
   my_experiment:
     winner: blue
@@ -170,7 +178,7 @@ experiments:
 
 You can also close an experiment to new participants while continuing to track existing ones:
 
-{% highlight ruby %}
+{% highlight yml %}
 experiments:
   my_experiment:
     closed: true
