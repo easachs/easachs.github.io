@@ -4,7 +4,7 @@
   <div class="container-fluid">
     {%- assign default_paths = site.pages | map: "path" -%}
     {%- assign page_paths = site.header_pages | default: default_paths -%}
-    <a class="site-title" rel="author" href="{{ '/' | relative_url }}"><span class="gold">&starf;</span> {{ site.title | escape }}</a>
+    <a class="site-title" rel="author" href="{{ '/' | relative_url }}">{{ site.title | escape }}</a>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
       aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">

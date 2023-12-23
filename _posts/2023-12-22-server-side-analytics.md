@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  Server-Side Google Analytics
-date:   2023-12-20 12:00:00
-tags: rails tutorial
+date:   2023-12-22 12:00:00
+tags: rails tutorial backend
 ---
 
 <img class="post-pic" src="/assets/images/posts/server-side-analytics.jpg" alt="Google Analytics">

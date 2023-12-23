@@ -2,7 +2,7 @@
 layout: post
 title:  Split Testing with Rails
 date:   2023-12-15 12:00:00
-tags: rails gems tutorial
+tags: rails gems tutorial backend
 ---
 
 <img class="post-pic" src="/assets/images/posts/field-test.jpg" alt="Split Testing">
