@@ -12,6 +12,7 @@ google_analytics: "G-RS80H21YWV"
 
 theme: minima
 plugins:
+  - jekyll-archives
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
@@ -20,6 +21,13 @@ collections:
   pages:
     output: true
     permalink: /:title
+  tag:
+    output: true
+    permalink: /tags/:title
+
+jekyll-archives:
+  enabled: tags
+  layout: default
 
 header_pages:
 - _pages/about.md

@@ -11,7 +11,7 @@ Split testing, also known as A/B testing, is a practice used in web development 
 
 Split testing is an excellent research tool because it puts the user experience at the forefront, focusing on what actual users prefer and how they behave. Will a page's new layout or theme impact the way your audience interacts with the site? Even changing the color of a button could result in users clicking it more or less often. With an effective split testing framework, businesses can better understand the impact of any changes they make.
 
-While many businesses use paid services like **Optimizely**, we recently implemented split testing in Rails with [**field_test**](https://github.com/ankane/field_test), which is available for free and comes with a dashboard for viewing results, using Bayesian statistics to evaluate how the different variants perform. While the docs are fantastic, I wanted to record the process of setting up **field_test** as well as highlight some key takeaways and challenges we encountered.
+While many businesses use paid services like **Optimizely**, we recently implemented split testing in Rails with [field_test](https://github.com/ankane/field_test), which is available for free and comes with a dashboard for viewing results, using Bayesian statistics to evaluate how the different variants perform. While the docs are fantastic, I wanted to record the process of setting up **field_test** as well as highlight some key takeaways and challenges we encountered.
 
 For our test we wanted half of new users to receive one variant of a popup, and the rest another - while tracking how many from each group signed up for a newsletter (our metric). Over time, we can use these results to make informed, data-driven decisions about which version of a feature performs better to improve and optimize an application.
 
@@ -80,7 +80,7 @@ For a view:
 <% test_variant = field_test(:my_experiment) %>
 {% endhighlight %}
 
-This will assign the current user to an experiment and variant, based on cookies (default), IP address, or [**ahoy_id**](https://github.com/ankane/ahoy), depending on configuration (see docs for more details). Going forward, that user will always receive their assigned variant, until the experiment ends or a winner is selected (or if they delete the cookie).
+This will assign the current user to an experiment and variant, based on cookies (default), IP address, or [ahoy_id](https://github.com/ankane/ahoy), depending on configuration (see docs for more details). Going forward, that user will always receive their assigned variant, until the experiment ends or a winner is selected (or if they delete the cookie).
 
 Then, in the appropriate view:
 
@@ -101,7 +101,7 @@ experiment = FieldTest::Experiment.find(:my_experiment)
 variant = experiment.variant(user)
 {% endhighlight %}
 
-For our split test, we needed to create two distinct versions of a popup. With [**view_component**](https://viewcomponent.org/) this was fairly straightforward. The modal already existed as a component, so we just had to pass in which variant to use. From there, we could differentiate between them within the component class and accompanying view. This might look like:
+For our split test, we needed to create two distinct versions of a popup. With [view_component](https://viewcomponent.org/) this was fairly straightforward. The modal already existed as a component, so we just had to pass in which variant to use. From there, we could differentiate between them within the component class and accompanying view. This might look like:
 
 {% highlight rb %}
 #=> app/components/your_component.rb

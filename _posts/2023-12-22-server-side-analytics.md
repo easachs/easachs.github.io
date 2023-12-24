@@ -13,7 +13,7 @@ This is where analytics comes in - **Google Analytics** is a free web analytics 
 
 This all makes analytics indispensable for web developers and marketers alike. It can be a comprehensive tool for understanding users, guiding design decisions and content creation, and ultimately optimizing web experiences. Whether you're a small startup or a large enterprise, integrating analytics into your application can offer key insights and a competitive edge in the digital marketplace.
 
-A new iteration, Google Analytics 4 (GA4), came out earlier this year, replacing the old Universal Analytics. To set it up for your app, visit [**Google Analytics**](https://analytics.google.com) and create an account and a new **property** (your project). This process is fairly straightforward - once finished you will be able to set up a **data stream**, which will provide you with a measurement ID and allow you to configure client-side analytics.
+A new iteration, Google Analytics 4 (GA4), came out earlier this year, replacing the old Universal Analytics. To set it up for your app, visit [Google Analytics](https://analytics.google.com) and create an account and a new **property** (your project). This process is fairly straightforward - once finished you will be able to set up a **data stream**, which will provide you with a measurement ID and allow you to configure client-side analytics.
 
 ### Client-side
 **Client-side** analytics are tracked from a user's browser via JavaScript. Setting up client-side GA4 is fairly simple - after setting up an account and your property with a data stream, just add the following to the **head** of your application (replacing the ID with your own measurement ID):
@@ -49,7 +49,7 @@ While client-side analytics is relatively commonplace, there are scenarios where
 
 This post is meant help guide you through setting up a server-side Google Analytics integration in a Ruby on Rails application.
 
-First, it is crucial to understand how GA4 works - take time to review the [**docs**](https://developers.google.com/analytics/devguides/collection/protocol/ga4) (you can ignore the `app_instance_id` bit of the request body). Our strategy will be to make an **API service** in conjunction with an **"event factory"** and a **background worker** to post custom events asynchronously for the actions we want to monitor. You will need your property's measurement ID, as well as a secret key that you can set up by navigating through Admin > Data Streams > select your stream > Measurement Protocol > Create.
+First, it is crucial to understand how GA4 works - take time to review the [docs](https://developers.google.com/analytics/devguides/collection/protocol/ga4) (you can ignore the `app_instance_id` bit of the request body). Our strategy will be to make an **API service** in conjunction with an **"event factory"** and a **background worker** to post custom events asynchronously for the actions we want to monitor. You will need your property's measurement ID, as well as a secret key that you can set up by navigating through Admin > Data Streams > select your stream > Measurement Protocol > Create.
 
 ### API Service
 Our first step will be to create an API service that will handle posting custom events. To do this, you will need to post a JSON payload to `https://www.google-analytics.com/mp/collect`.
