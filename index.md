@@ -12,7 +12,7 @@ Fullstack software design specializing in Ruby on Rails. With a focus on buildin
 
 ### **Services**
 - **Custom Web Development**: Bespoke applications that cater to your business needs
-- **API Development & Integration**: Developing and integrating APIs for enhanced functionality and seamless third-party service integration
+- **API Development & Integration**: Developing and implementing APIs for enhanced functionality and seamless third-party service integration
 - **Database Design & Optimization**: Ensuring your data is stored efficiently and securely, with optimal performance
 
 <!-- ### **Testimonials**
