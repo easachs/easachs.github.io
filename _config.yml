@@ -30,8 +30,7 @@ jekyll-archives:
   layout: default
 
 header_pages:
-- _pages/about.md
-- _pages/resume.html
 - _pages/projects.md
 - _pages/posts.md
+- _pages/resume.html
 - _pages/contact.html

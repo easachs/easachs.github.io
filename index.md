@@ -1,6 +1,6 @@
 ---
 layout: page
-title: EAS Consulting
+title: EAS Software Consulting
 ---
 
 Fullstack software design specializing in Ruby on Rails. With a focus on building robust, scalable, and maintainable web applications, EAS helps businesses and individuals turn their ideas into reality.

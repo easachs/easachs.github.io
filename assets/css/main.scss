@@ -15,7 +15,7 @@ body {
   background-size: cover;
 
   @include media-query($on-palm) {
-    background-image: linear-gradient(to right, #0D1B2A, #778DA9);
+    background-image: linear-gradient(#0D1B2A, #778DA9);
   }
 }
 
@@ -47,16 +47,6 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-
-  &_flex {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    @include media-query($on-palm) {
-      display: block;
-    }
   }
 
   section {
@@ -126,7 +116,7 @@ body {
   margin-right: $spacing-unit / 6;
 }
 
-.flex-footer {
+.flex {
   display: flex;
   justify-content: space-between;
   align-items: center;
