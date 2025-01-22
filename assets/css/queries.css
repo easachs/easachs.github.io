@@ -1,3 +1,9 @@
+@media (max-width: 75em) {
+  .container {
+    margin: 3.2rem auto;
+  }
+}
+
 @media (max-width: 62em) {
   h2 {
     font-size: 3.2rem;
@@ -68,6 +74,14 @@
 
   .badge {
     font-size: 1.6rem;
+  }
+
+  .container {
+    padding: 2rem 3.2rem;
+  }
+
+  .posts-list {
+    grid-template-columns: 1fr;
   }
 
   .project-card {

@@ -41,6 +41,18 @@ h2 {
   margin-bottom: 4rem;
 }
 
+.container {
+  padding: 4rem;
+  margin: 0 auto;
+  max-width: 96rem;
+}
+
+.container a:link,
+.container a:visited {
+  color: var(--primary);
+  font-weight: bold;
+}
+
 .text-center {
   text-align: center;
 }
@@ -90,7 +102,7 @@ a:active {
   align-items: center;
   justify-content: center;
 
-  background: linear-gradient(rgb(64, 89, 152, 0.6), rgb(64, 89, 152, 0.6)),
+  background: linear-gradient(rgb(64, 89, 152, 0.3), rgba(84, 54, 255, 0.3)),
     url('/assets/images/core/habitat.jpg');
 
   background-position: top;
@@ -104,8 +116,8 @@ a:active {
   display: flex;
   flex-direction: column;
   max-width: 64rem;
-  color: #f8f8f8;
-  background-color: rgba(0, 0, 0, 0.1);
+  color: var(--light);
+  background-color: rgba(0, 0, 0, 0.15);
   padding: 4rem 6rem;
   backdrop-filter: blur(5px);
   border-radius: 0.5rem;
@@ -121,7 +133,6 @@ a:active {
   font-size: 1.5rem;
   margin-bottom: 2rem;
   letter-spacing: 0.6px;
-  color: var(--light-muted);
 }
 
 .header-links {
@@ -168,12 +179,6 @@ a:active {
 
 /* ABOUT */
 
-.about {
-  padding: 4rem;
-  margin: 3.2rem auto;
-  max-width: 96rem;
-}
-
 .about-content h2 {
   margin-bottom: 4rem;
 }
@@ -203,7 +208,7 @@ a:active {
 .about-card i {
   position: relative;
   font-size: 2.4rem;
-  color: var(--primary-muted);
+  color: rgba(24, 100, 171, 0.5);
 }
 
 .about-card:hover {
@@ -221,30 +226,23 @@ a:active {
   flex-wrap: wrap;
   gap: 1.2rem;
   justify-content: center;
-
   box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.25),
     inset 0px -5px 15px rgba(0, 0, 0, 0.25);
 }
 
 /* SKILLS */
 
-.skills {
-  padding: 4rem;
-  margin: 0 auto;
-  margin: 4rem auto 0;
-  max-width: 96rem;
-}
-
 .skills-list {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
-  margin-bottom: 4rem;
 }
 
 .badge {
   display: inline-block;
+  color: #444444;
+  font-weight: 500;
   font-size: 1.8rem;
   align-items: center;
   background-color: var(--primary-muted);
@@ -259,18 +257,62 @@ a:active {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 8px 24px;
 }
 
-/* SHOWCASE */
+/* POSTS */
 
-.showcase {
-  padding: 0 4rem 4rem 4rem;
-  margin: 0 auto 4rem auto;
+.posts-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 1fr;
+  gap: 2rem;
   max-width: 96rem;
 }
 
-.showcase a {
-  color: var(--primary);
-  font-weight: bold;
+.post-card {
+  background-color: var(--light-muted);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  height: 100%;
+  border: 1px solid var(--primary-muted);
+  border-radius: 0.5rem;
+  transition: all 0.3s;
 }
+
+.post-card:hover {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 8px 24px;
+  transform: translateY(-2px);
+}
+
+.post-header {
+  display: flex;
+  gap: 1.6rem;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.post-card p {
+  width: 100%;
+  margin: 0;
+}
+
+.post-date {
+  color: #444444;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.post-name {
+  font-weight: bold;
+  color: var(--primary);
+}
+
+.post-content {
+  color: #444444;
+  font-size: 1.4rem;
+}
+
+/* PROJECTS */
 
 .project-card {
   background-color: var(--primary-muted);
@@ -299,7 +341,7 @@ a:active {
 .project-text {
   margin: 0 0 2rem 0;
   text-align: center;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   color: #444444;
 }
 
