@@ -1,0 +1,12 @@
+<section id="skills">
+  <div class="container">
+    <h2 class="text-center"><strong>Skills</strong></h2>
+    {% assign skills = "Ruby, Rails, JavaScript, React, Python, Hotwire, SQL, REST, HTML, CSS/SCSS, JSON, Tailwind, Bootstrap, Node, Jekyll, RSpec, CI/CD, Docker, Git, Heroku, Redis, Stripe, Figma" | split: ", " %}
+    
+    <ul class="skills-list">
+      {% for skill in skills %}
+      <li class="badge">{{ skill }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>

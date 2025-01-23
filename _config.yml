@@ -1,7 +1,6 @@
 title: Eli Sachs
 email: easachs13@gmail.com
-description: >-
-  Sophistication through Simplicity
+description: Web Developer
 baseurl: ""
 url: "https://www.easachs.com"
 
@@ -12,7 +11,6 @@ google_analytics: "G-RS80H21YWV"
 
 theme: minima
 plugins:
-  - jekyll-archives
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
@@ -21,16 +19,3 @@ collections:
   pages:
     output: true
     permalink: /:title
-  tag:
-    output: true
-    permalink: /tags/:title
-
-jekyll-archives:
-  enabled: tags
-  layout: default
-
-header_pages:
-- _pages/projects.md
-- _pages/posts.md
-- _pages/resume.html
-- _pages/contact.html

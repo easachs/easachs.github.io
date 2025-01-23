@@ -1,0 +1,17 @@
+<div class="banner">
+  <div class="container">
+    <div class="posts-list">
+      {%- for post in site.posts limit:3 -%}
+      <div class="posts-card">
+        <a href="{{ post.url | relative_url }}">
+          <div class="posts-top">
+            <p class="posts-date">{{ post.date | date: "%b %-d, %Y" }}</p>
+            <p class="posts-name">{{ post.title }}</p>
+          </div>
+          <p class="posts-content">{{ post.content | strip_html | truncatewords: 10 }}</p>
+        </a>
+      </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
