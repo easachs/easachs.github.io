@@ -3,6 +3,7 @@
   --light-muted: rgba(248, 248, 248, 0.8);
   --primary: #405998;
   --primary-muted: rgba(24, 100, 171, 0.15);
+  --primary-dark: #1B263B;
 }
 
 html {
@@ -14,12 +15,12 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
 }
 
 body {
   background-color: var(--light-muted);
   color: #444444;
+  font-family: 'Inter', sans-serif;
 }
 
 p {
@@ -59,7 +60,7 @@ h2 {
 
 a:link,
 a:visited {
-  color: var(--light-muted);
+  color: var(--primary-dark);
   text-decoration: none;
 }
 
@@ -242,7 +243,6 @@ a:active {
 .badge {
   display: inline-block;
   color: #444444;
-  font-weight: 500;
   font-size: 1.8rem;
   align-items: center;
   background-color: var(--primary-muted);
@@ -340,7 +340,6 @@ a:active {
 
 .project-text {
   margin: 0 0 2rem 0;
-  text-align: center;
   font-size: 1.6rem;
   color: #444444;
 }

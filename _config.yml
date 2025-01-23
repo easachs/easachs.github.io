@@ -21,6 +21,9 @@ collections:
   pages:
     output: true
     permalink: /:title
+  archive:
+    output: true
+    permalink: /archive/:title
   tag:
     output: true
     permalink: /tags/:title

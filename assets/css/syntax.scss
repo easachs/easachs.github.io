@@ -1,0 +1,41 @@
+---
+---
+
+@import 'minima';
+
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+  font-family: 'Inter', sans-serif;
+}
+
+.post {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 4rem;
+}
+
+.post a:link,
+.post a:visited {
+  color: var(--primary);
+  font-weight: bold;
+}
+
+.post a:hover,
+.post a:active {
+  color: var(--primary-dark);
+}
+
+.post-header {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.post-content {
+  margin-bottom: 0;
+}
+
+.highlight {
+  background: 0;
+}
