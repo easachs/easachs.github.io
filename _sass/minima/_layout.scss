@@ -246,6 +246,12 @@
   transform: translateY(-4px);
 }
 
+@media (max-width: 48em) {
+  .about-card p {
+    text-align: center;
+  }
+}
+
 /* BANNER */
 .banner {
   width: 100%;
@@ -549,19 +555,14 @@
   display: block;
   max-width: 100%;
   height: auto;
+  object-fit: cover;
   margin: 0;
   border-radius: 0.5rem;
-  
 }
 
 @media (max-width: 48em) {
   .project-card {
     padding: 2rem;
-  }
-
-  .project-card img {
-    height: fit-content;
-    opacity: 1;
   }
 }
 
