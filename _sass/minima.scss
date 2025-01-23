@@ -1,5 +1,6 @@
 @charset "utf-8";
 
+// SCSS variables - used for internal calculations and defaults
 $base-font-family: "Inter", sans-serif;
 $base-font-size: 16px !default;
 $base-font-weight: 400 !default;
@@ -7,21 +8,75 @@ $small-font-size: $base-font-size * 0.9 !default;
 $base-line-height: 1.5 !default;
 
 $spacing-unit: 30px !default;
+$content-width: 800px !default;
+$on-palm: 600px !default;
+$on-laptop: 800px !default;
 
-$background-color: #F8F9FA !default;
-$brand-color: #415a77 !default;
-$brand-color-dark: #1B263B !default;
-
+// Theme colors
 $grey-color: #444444 !default;
 $grey-color-light: lighten($grey-color, 40%) !default;
 $grey-color-dark: darken($grey-color, 25%) !default;
+$grey-text: $grey-color;  // Add this for semantic naming
 
 $table-text-align: left !default;
 
-$content-width: 800px !default;
+// Custom theme colors
+$light: #f8f8f8;
+$light-muted: rgba(248, 248, 248, 0.8);
+$primary: #405998;
+$primary-muted: rgba(24, 100, 171, 0.15);
+$primary-dark: #1B263B;
 
-$on-palm: 600px !default;
-$on-laptop: 800px !default;
+// Shadow variables
+$shadow-light: rgba(0, 0, 0, 0.05);
+$shadow-medium: rgba(0, 0, 0, 0.1);
+$shadow-dark: rgba(0, 0, 0, 0.2);
+$shadow-text: rgba(0, 0, 0, 0.4);
+
+// Common gradients
+$primary-gradient: rgba(64, 89, 152, 0.6), rgba(64, 89, 152, 1);
+$hero-gradient: rgba(64, 89, 152, 0.3), rgba(84, 54, 255, 0.3);
+
+$type-scale: (
+  small: 1.2rem,
+  base: 1.6rem,
+  medium: 2.4rem,
+  large: 3.2rem,
+  xlarge: 4rem,
+  huge: 6rem
+);
+
+$grid-gaps: (
+  small: 1rem,
+  medium: 2rem,
+  large: 4rem
+);
+
+$container-max-width: 96rem;
+$content-max-width: 80rem;
+
+$spacing: (
+  xs: 0.4rem,
+  sm: 1rem,
+  md: 2rem,
+  lg: 4rem,
+  xl: 6rem
+);
+
+$breakpoints: (
+  mobile: 48em,   // 768px
+  tablet: 62em,   // 992px
+  desktop: 75em,  // 1200px
+  wide: 87.5em    // 1400px
+);
+
+@function spacing($size) {
+  @return map-get($spacing, $size);
+}
+
+@function type-scale($size) {
+  @return map-get($type-scale, $size);
+}
 
 @mixin media-query($device) {
   @media screen and (max-width: $device) {
@@ -31,6 +86,31 @@ $on-laptop: 800px !default;
 
 @mixin relative-font-size($ratio) {
   font-size: $base-font-size * $ratio;
+}
+
+@mixin card-shadow($opacity: 0.1) {
+  box-shadow: rgba(0, 0, 0, $opacity) 0px 8px 24px;
+}
+
+@mixin inset-shadow {
+  box-shadow: inset 0px 5px 15px $shadow-medium,
+    inset 0px -5px 15px $shadow-medium;
+}
+
+@mixin hover-lift($distance: -4px) {
+  transition: all 0.3s ease;
+  &:hover {
+    transform: translateY($distance);
+    @include card-shadow(0.2);
+  }
+}
+
+@mixin respond-to($breakpoint) {
+  $value: map-get($breakpoints, $breakpoint);
+  
+  @media (max-width: $value) {
+    @content;
+  }
 }
 
 @import "minima/base",

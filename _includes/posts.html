@@ -7,10 +7,10 @@
       <a href="{{ post.url | relative_url }}">
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
         <div class="post-date">{{ post.date | date: date_format }}</div>
-        <div class="post-header">
+        <div class="post-top">
           <p class="post-name">{{ post.title | escape }}</p>
         </div>
-        <p class="post-content">{{ post.content | strip_html | truncatewords: 10 }}</p>
+        <p class="post-blurb">{{ post.content | strip_html | truncatewords: 10 }}</p>
       </a>
     </li>
     {% endunless %}
