@@ -28,7 +28,6 @@ body {
 p {
   font-size: 1.6rem;
   line-height: 1.4;
-  margin-bottom: 2rem;
   letter-spacing: 0.2px;
 }
 
@@ -44,6 +43,22 @@ h2 {
   margin-bottom: 4rem;
 }
 
+@media (max-width: 48em) {
+  h2 {
+    font-size: 2.4rem;
+  }
+
+  h2.text-center {
+    font-size: 3.2rem;
+  }
+}
+
+@media (max-width: 62em) {
+  h2 {
+    font-size: 3.2rem;
+  }
+}
+
 a:link,
 a:visited {
   color: $primary-dark;
@@ -55,8 +70,6 @@ a:active {
   cursor: pointer;
   color: $light;
 }
-
-/* FOOTER */
 
 footer {
   background-color: $primary;
@@ -71,9 +84,15 @@ footer {
     inset 0px -5px 15px rgba(0, 0, 0, 0.25);
 }
 
-footer>.footer-content {
+footer .footer-content {
   padding: 4rem 6.4rem;
   justify-items: center;
+}
+
+@media (max-width: 48em) {
+  footer>.footer-content {
+    padding: 3.2rem 4rem;
+  }
 }
 
 footer .social-links {
@@ -85,21 +104,6 @@ footer p {
   letter-spacing: 0.8px;
 }
 
-// Add near the top with other resets
 ul {
   list-style: none;
-}
-
-// Add post content list styling
-.post-content {
-  ul, ol {
-    list-style: disc;
-    margin-left: 2rem;
-    margin-bottom: 2rem;
-    
-    li {
-      font-size: type-scale(base);
-      margin-bottom: 1rem;
-    }
-  }
 }

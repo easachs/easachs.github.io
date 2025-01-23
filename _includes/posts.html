@@ -1,20 +1,17 @@
-{%- if site.posts.size > 0 -%}
 <div class="banner">
-  <ul class="posts-list">
-    {%- for post in site.posts -%}
-    {% unless post.path contains 'archive/' %}
-    <li class="post-card">
-      <a href="{{ post.url | relative_url }}">
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <div class="post-date">{{ post.date | date: date_format }}</div>
-        <div class="post-top">
-          <p class="post-name">{{ post.title | escape }}</p>
-        </div>
-        <p class="post-blurb">{{ post.content | strip_html | truncatewords: 10 }}</p>
-      </a>
-    </li>
-    {% endunless %}
-    {%- endfor -%}
-  </ul>
+  <div class="container">
+    <div class="posts-list">
+      {%- for post in site.posts limit:3 -%}
+      <div class="posts-card">
+        <a href="{{ post.url | relative_url }}">
+          <div class="posts-top">
+            <p class="posts-date">{{ post.date | date: "%b %-d, %Y" }}</p>
+            <p class="posts-name">{{ post.title }}</p>
+          </div>
+          <p class="posts-content">{{ post.content | strip_html | truncatewords: 10 }}</p>
+        </a>
+      </div>
+      {%- endfor -%}
+    </div>
+  </div>
 </div>
-{%- endif -%}
