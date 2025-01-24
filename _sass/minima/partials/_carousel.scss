@@ -1,0 +1,23 @@
+// CAROUSEL
+
+.carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+
+  .carousel-image {
+    min-width: 100%;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    // display: none;
+  }
+
+  .carousel-image.active {
+    opacity: 1;
+    position: relative;
+    // display: block;
+  }
+}

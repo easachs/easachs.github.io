@@ -1,0 +1,54 @@
+// ABOUT
+
+.about-content h2 {
+  margin: 0 2rem 4rem 2rem;
+}
+
+.about-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: spacing(md);
+
+  @include respond-to(tablet) {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 62em) {
+  .about-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+.about-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 3rem;
+  background-color: $primary-muted;
+  border-radius: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 8px 24px;
+  transition: all 0.3s;
+}
+
+.about-card p {
+  margin-bottom: 0;
+}
+
+.about-card i {
+  position: relative;
+  font-size: 2.4rem;
+  color: rgba(24, 100, 171, 0.5);
+}
+
+.about-card:hover {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 8px 24px;
+  transform: translateY(-4px);
+}
+
+@media (max-width: 48em) {
+  .about-card p {
+    text-align: center;
+  }
+}

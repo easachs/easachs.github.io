@@ -1,0 +1,37 @@
+// SKILLS
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.badge {
+  display: inline-block;
+  color: #444444;
+  font-size: 1.8rem;
+  align-items: center;
+  background-color: $primary-muted;
+  padding: 0.8rem 1.6rem;
+  border-radius: 99px;
+  transition: all 0.3s;
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.1),
+    inset 0 1px 1px rgba(255, 255, 255, 0.25);
+  // border: 1px solid rgba(24, 100, 171, 0.2);
+
+  &:hover {
+    background-color: rgba(24, 100, 171, 0.3);
+    transform: translateY(-2px);
+    box-shadow:
+      0 4px 8px rgba(0, 0, 0, 0.15),
+      inset 0 1px 1px rgba(255, 255, 255, 0.25);
+  }
+}
+
+@media (max-width: 48em) {
+  .badge {
+    font-size: 1.2rem;
+  }
+}

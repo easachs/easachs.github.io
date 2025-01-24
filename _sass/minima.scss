@@ -1,6 +1,7 @@
 @charset "utf-8";
 
-// SCSS variables - used for internal calculations and defaults
+// SCSS variables
+
 $base-font-family: "Inter", sans-serif;
 $base-font-size: 16px !default;
 $base-font-weight: 400 !default;
@@ -13,14 +14,16 @@ $on-palm: 600px !default;
 $on-laptop: 800px !default;
 
 // Theme colors
+
 $grey-color: #444444 !default;
 $grey-color-light: lighten($grey-color, 40%) !default;
 $grey-color-dark: darken($grey-color, 25%) !default;
-$grey-text: $grey-color;  // Add this for semantic naming
+$grey-text: $grey-color;
 
 $table-text-align: left !default;
 
 // Custom theme colors
+
 $light: #f8f8f8;
 $light-muted: rgba(248, 248, 248, 0.8);
 $primary: #405998;
@@ -28,12 +31,14 @@ $primary-muted: rgba(24, 100, 171, 0.15);
 $primary-dark: #1B263B;
 
 // Shadow variables
+
 $shadow-light: rgba(0, 0, 0, 0.05);
 $shadow-medium: rgba(0, 0, 0, 0.1);
 $shadow-dark: rgba(0, 0, 0, 0.2);
 $shadow-text: rgba(0, 0, 0, 0.4);
 
 // Common gradients
+
 $primary-gradient: rgba(64, 89, 152, 0.6), rgba(64, 89, 152, 1);
 $hero-gradient: rgba(64, 89, 152, 0.3), rgba(84, 54, 255, 0.3);
 

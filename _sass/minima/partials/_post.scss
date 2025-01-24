@@ -1,0 +1,166 @@
+.post-layout {
+  padding: 4rem;
+
+  width: 100%;
+  padding: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  justify-content: center;
+}
+
+.post {
+  max-width: $content-max-width;
+  margin: spacing(lg) auto;
+  background-color: $light-muted;
+}
+
+.post a:link,
+.post a:visited {
+  color: $primary;
+  font-weight: bold;
+}
+
+.post a:hover,
+.post a:active {
+  color: $primary-dark;
+}
+
+.post-header {
+  text-align: center;
+}
+
+.post-title {
+  font-size: type-scale(xlarge);
+  color: $primary;
+  margin-bottom: spacing(sm);
+  line-height: 1.2;
+}
+
+.post-meta {
+  font-size: type-scale(small);
+  color: $grey-text;
+  letter-spacing: 0.5px;
+}
+
+.post-content {
+  margin-bottom: 0;
+  font-size: type-scale(base);
+
+  pre {
+    overflow-x: auto;
+    padding: spacing(md);
+    margin: spacing(md) 0;
+    background-color: #f1f1f1;
+    border: 1px solid $primary-muted;
+    border-radius: 0.5rem;
+  }
+
+  code {
+    font-size: type-scale(base);
+    padding: 0.2rem 0.4rem;
+    background-color: #f1f1f1;
+    border-radius: 0.3rem;
+  }
+
+  pre code {
+    padding: 0;
+    background-color: transparent;
+  }
+
+  h2 {
+    font-size: type-scale(large);
+    color: $primary;
+    margin: spacing(xl) 0 spacing(md);
+  }
+
+  h3 {
+    font-size: type-scale(medium);
+    color: $primary;
+    margin: spacing(lg) 0 spacing(md);
+  }
+
+  p {
+    margin-bottom: spacing(md);
+    line-height: 1.6;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: spacing(lg) auto;
+    border-radius: 0.5rem;
+  }
+
+  blockquote {
+    margin: spacing(lg) 0;
+    padding: spacing(md);
+    background-color: $primary-muted;
+    border-left: 4px solid $primary;
+    border-radius: 0 0.5rem 0.5rem 0;
+
+    p {
+      margin: 0;
+      font-style: italic;
+    }
+  }
+
+  hr {
+    margin: spacing(xl) auto;
+    width: 80%;
+    border: none;
+    border-top: 1px solid $primary-muted;
+  }
+
+  ul,
+  ol {
+    list-style: disc;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+
+    li {
+      font-size: type-scale(base);
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.highlight {
+  background: 0;
+  border-radius: 0.5rem;
+  margin: spacing(md) 0;
+
+  pre {
+    margin: 0;
+  }
+}
+
+@include respond-to(mobile) {
+  .post-layout {
+    padding: 0;
+    background: none;
+    display: block;
+  }
+
+  .post {
+    margin: 0;
+    padding: spacing(lg);
+    border-radius: 0;
+    min-height: 100vh;
+  }
+
+  .post-title {
+    font-size: type-scale(large);
+  }
+
+  .post-content {
+    h2 {
+      font-size: type-scale(medium);
+    }
+
+    h3 {
+      font-size: type-scale(base);
+    }
+  }
+}

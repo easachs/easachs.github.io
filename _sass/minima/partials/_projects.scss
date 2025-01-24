@@ -1,0 +1,51 @@
+// PROJECTS
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: spacing(lg);
+}
+
+@media (max-width: 48em) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.project-card {
+  @extend %card-base;
+  background-color: $primary-muted;
+  padding: 4rem;
+  @include hover-lift;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project-card img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin: 0;
+  border-radius: 0.5rem;
+}
+
+@media (max-width: 48em) {
+  .project-card {
+    padding: 2rem;
+  }
+}
+
+.project-text {
+  margin: 0 0 2rem 0;
+  font-size: 1.6rem;
+  color: #444444;
+}
+
+@media (max-width: 48em) {
+  .project-text {
+    font-size: 1.4rem;
+  }
+}

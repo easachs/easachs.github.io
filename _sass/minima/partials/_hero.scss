@@ -1,0 +1,145 @@
+// HERO
+
+.hero {
+  padding: 4rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(rgba(64, 89, 152, 0.3), rgba(84, 54, 255, 0.3)),
+    url('/assets/images/core/habitat.jpg');
+
+  background-position: top;
+  object-fit: cover;
+  background-size: cover;
+
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 20px;
+}
+
+@media (max-height: 32em) {
+  .hero {
+    height: auto;
+    justify-content: flex-start;
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  max-width: 64rem;
+  color: $light;
+  background-color: rgba(0, 0, 0, 0.15);
+  padding: 4rem 6rem;
+  backdrop-filter: blur(5px);
+  border-radius: 0.5rem;
+}
+
+@media (max-width: 48em) {
+  .header {
+    margin-top: 1.2rem;
+    padding: 2rem 2rem;
+    width: 100%;
+    max-width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header h1 {
+    font-size: 3.2rem;
+    text-align: center;
+    width: 100%;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  }
+
+  .header h2 {
+    font-size: 2rem;
+    margin-bottom: 1.8rem;
+    max-width: 48rem;
+  }
+}
+
+.hero h1 {
+  font-size: 6rem;
+  margin-bottom: 2rem;
+  font-weight: bolder;
+}
+
+@media (max-width: 48em) {
+  .hero h1 {
+    font-size: 4rem;
+  }
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  letter-spacing: 0.6px;
+}
+
+.header-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #f8f8f8;
+}
+
+@media (max-width: 48em) {
+  .header-links {
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 1.2rem;
+  }
+}
+
+.social-links {
+  display: flex;
+  gap: 0.4rem;
+  list-style: none;
+  gap: 1rem;
+}
+
+.social-links i {
+  font-size: 2.4rem;
+  color: $light-muted;
+}
+
+.social-links a:link,
+.social-links a:visited {
+  display: inline-block;
+  position: relative;
+  top: 0;
+  transition: all 0.3s;
+}
+
+.social-links a:hover,
+.social-links a:active {
+  top: -0.2rem;
+}
+
+.resume-container {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.resume-container i {
+  font-size: 1.8rem;
+  opacity: 0.8;
+  color: $light-muted;
+}
+
+@media (max-width: 48em) {
+  .resume-container {
+    flex: 1;
+  }
+}
+
+@media (max-width: 48em) {
+  .resume-download {
+    display: none;
+  }
+}
