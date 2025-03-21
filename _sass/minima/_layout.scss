@@ -1,20 +1,14 @@
 // CONTAINER
 
 .container {
-  padding: 4rem;
-  margin: 0 auto;
+  padding: 2rem;
+  margin: 2rem auto;
   max-width: $container-max-width;
 }
 
 @media (max-width: 48em) {
   .container {
     padding: 2rem 3.2rem;
-  }
-}
-
-@media (max-width: 75em) {
-  .container {
-    margin: 3.2rem auto;
   }
 }
 
@@ -35,9 +29,8 @@
 .btn:visited {
   display: flex;
   font-size: 1.2rem;
-  border: 1px solid $light;
   color: $light;
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0.125);
   border-radius: 0.5rem;
   padding: 1rem 2rem;
   cursor: pointer;
@@ -50,15 +43,7 @@
 
 .btn:hover,
 .btn:active {
-  background-color: rgba(255, 255, 255, 0.125);
-}
-
-// CARDS
-
-%card-base {
-  border-radius: 0.5rem;
-  transition: all 0.3s ease;
-  @include card-shadow(0.1);
+  background-color: rgba(255, 255, 255, 0.25);
 }
 
 // 404
@@ -78,9 +63,9 @@
 
 @import "partials/_hero";
 @import "partials/_about";
-@import "partials/_banner";
 @import "partials/_skills";
 @import "partials/_posts";
 @import "partials/_post";
 @import "partials/_projects";
 @import "partials/_carousel";
+@import "partials/_footer";

@@ -136,7 +136,7 @@
   }
 }
 
-@include respond-to(mobile) {
+@media (max-width: 48em) {
   .post-layout {
     padding: 0;
     background: none;

@@ -13,11 +13,11 @@
 }
 
 .project-card {
-  @extend %card-base;
   background-color: $primary-muted;
   padding: 4rem;
   @include hover-lift;
-
+  border-radius: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 8px 24px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
