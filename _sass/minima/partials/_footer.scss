@@ -1,0 +1,38 @@
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.6rem;
+}
+
+footer .footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 6.4rem;
+
+  a:hover,
+  .social-links i {
+    color: $primary;
+  }
+
+  .disclaimer {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 48em) {
+  footer>.footer-content {
+    padding: 3.2rem 4rem;
+  }
+}
+
+footer .social-links {
+  margin-bottom: 1.2rem;
+}
+
+footer p {
+  margin: 0;
+  letter-spacing: 0.8px;
+}

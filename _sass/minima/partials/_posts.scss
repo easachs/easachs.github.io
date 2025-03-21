@@ -1,14 +1,27 @@
 // POSTS
 
+.posts-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: spacing(md);
+}
+
+@media (max-width: 48em) {
+  .posts-list {
+    grid-template-columns: 1fr;
+  }
+}
+
 .posts-card {
-  @extend %card-base;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: $light-muted;
-  padding: spacing(md);
-  height: 100%;
-  border: 1px solid $primary-muted;
+  gap: 2rem;
+  padding: 3rem;
+  background-color: $primary-muted;
+  border-radius: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 8px 24px;
+  transition: all 0.3s;
   @include hover-lift;
 }
 

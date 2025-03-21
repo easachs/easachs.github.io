@@ -28,7 +28,7 @@
 .header {
   display: flex;
   flex-direction: column;
-  max-width: 64rem;
+  max-width: 60rem;
   color: $light;
   background-color: rgba(0, 0, 0, 0.15);
   padding: 4rem 6rem;
@@ -58,7 +58,6 @@
   .header h2 {
     font-size: 2rem;
     margin-bottom: 1.8rem;
-    max-width: 48rem;
   }
 }
 
@@ -105,6 +104,10 @@
 .social-links i {
   font-size: 2.4rem;
   color: $light-muted;
+
+  &:hover {
+    color: $light;
+  }
 }
 
 .social-links a:link,
@@ -127,9 +130,12 @@
 }
 
 .resume-container i {
-  font-size: 1.8rem;
   opacity: 0.8;
   color: $light-muted;
+
+  &:hover {
+    color: $light;
+  }
 }
 
 @media (max-width: 48em) {

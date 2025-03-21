@@ -68,13 +68,6 @@ $spacing: (
   xl: 6rem
 );
 
-$breakpoints: (
-  mobile: 48em,   // 768px
-  tablet: 62em,   // 992px
-  desktop: 75em,  // 1200px
-  wide: 87.5em    // 1400px
-);
-
 @function spacing($size) {
   @return map-get($spacing, $size);
 }
@@ -102,19 +95,11 @@ $breakpoints: (
     inset 0px -5px 15px $shadow-medium;
 }
 
-@mixin hover-lift($distance: -4px) {
+@mixin hover-lift($distance: -2px) {
   transition: all 0.3s ease;
   &:hover {
     transform: translateY($distance);
     @include card-shadow(0.2);
-  }
-}
-
-@mixin respond-to($breakpoint) {
-  $value: map-get($breakpoints, $breakpoint);
-  
-  @media (max-width: $value) {
-    @content;
   }
 }
 
